@@ -1,2 +1,5 @@
 claves.txt
-styles/
+
+styles
+style.css
+style.scss
