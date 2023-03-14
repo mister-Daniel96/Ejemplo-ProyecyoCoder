@@ -1,0 +1,50 @@
+
+/* Crear variables globales */
+$color-primario:blue;
+
+/* @IMPORT */
+@import "./components/nav";
+
+
+/* Concatenar clases */
+nav{
+    color: red;
+    border: $variable-nav;
+    ul{
+        background-color: blueviolet;
+        li{
+            text-align: center;
+            a{
+                text-decoration: none;
+                color: $color-primario;
+            }
+            p{
+                font-size: 20px;
+            }
+        }
+
+    }
+}
+
+/* Uso de pseudoclases */
+
+a{
+    color:red;
+    font-weight: bold;
+    &:hover{
+        font-size: 25px;
+    }
+}
+/* rehuso de selector anterior
+Concatenar clases
+*/
+.bloque{
+    color: blue;
+    &__elemento{
+        background-color: red;
+        color: #fff;
+    }
+    &__icon{
+        size: 20px;
+    }
+}
