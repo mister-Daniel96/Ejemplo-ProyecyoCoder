@@ -16,6 +16,7 @@
 /* Concatenar clases */
 nav {
   color: red;
+  border: 5px solid black;
 }
 nav ul {
   background-color: blueviolet;
@@ -52,6 +53,94 @@ Concatenar clases
 }
 .bloque__icon {
   size: 20px;
+}
+
+/* condicional    IF - ELSE   */
+.button {
+  color: black;
+}
+
+/* Bucle     FOR    */
+/* through es para star-end dentro del bucle */
+/*  con el -trough- toma desde el 1 al 5 
+el -to- toma desde el 1 al 4  */
+/* creamos una clase elemento-1  elemento-1,col-2 */
+.elemento-1 {
+  width: 10%; /*  10% 20%...100% */
+}
+
+/*  con el -trough- toma desde el 1 al 5 
+el -to- toma desde el 1 al 4  */
+/* creamos una clase elemento-2  elemento-1,col-2 */
+.elemento-2 {
+  width: 20%; /*  10% 20%...100% */
+}
+
+/*  con el -trough- toma desde el 1 al 5 
+el -to- toma desde el 1 al 4  */
+/* creamos una clase elemento-3  elemento-1,col-2 */
+.elemento-3 {
+  width: 30%; /*  10% 20%...100% */
+}
+
+/*  con el -trough- toma desde el 1 al 5 
+el -to- toma desde el 1 al 4  */
+/* creamos una clase elemento-4  elemento-1,col-2 */
+.elemento-4 {
+  width: 40%; /*  10% 20%...100% */
+}
+
+/*  con el -trough- toma desde el 1 al 5 
+el -to- toma desde el 1 al 4  */
+/* creamos una clase elemento-5  elemento-1,col-2 */
+.elemento-5 {
+  width: 50%; /*  10% 20%...100% */
+}
+
+/*   EACH */
+/* crea una clase blue, yellow y black con sus respectivos colores */
+.blue {
+  color: blue;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.black {
+  color: black;
+}
+
+.font-Helvica {
+  font-family: "Helvica", sans-serif;
+  font-size: 16px;
+}
+
+.font-Arial {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+}
+
+.font-Verdana {
+  font-family: "Verdana", sans-serif;
+  font-size: 16px;
+}
+
+/* ----  MAPS  ------ */
+.btn--twitter {
+  background-color: #55acee;
+}
+
+.btn--facebook {
+  background-color: #3a5795;
+}
+
+.btn--send-mail {
+  background-color: #c25e30;
+}
+
+.tituloPrincipal {
+  color: #55acee;
 }
 
 /*# sourceMappingURL=style.css.map */

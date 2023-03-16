@@ -1,24 +1,27 @@
-
 /* Crear variables globales */
-$color-primario:blue;
+$color-primario: blue;
 
 /* @IMPORT */
 @import "./components/nav";
 
 
 /* Concatenar clases */
-nav{
+nav {
     color: red;
     border: $variable-nav;
-    ul{
+
+    ul {
         background-color: blueviolet;
-        li{
+
+        li {
             text-align: center;
-            a{
+
+            a {
                 text-decoration: none;
                 color: $color-primario;
             }
-            p{
+
+            p {
                 font-size: 20px;
             }
         }
@@ -28,23 +31,88 @@ nav{
 
 /* Uso de pseudoclases */
 
-a{
-    color:red;
+a {
+    color: red;
     font-weight: bold;
-    &:hover{
+
+    &:hover {
         font-size: 25px;
     }
 }
+
 /* rehuso de selector anterior
 Concatenar clases
 */
-.bloque{
+.bloque {
     color: blue;
-    &__elemento{
+
+    &__elemento {
         background-color: red;
         color: #fff;
     }
-    &__icon{
+
+    &__icon {
         size: 20px;
     }
+}
+
+/* condicional    IF - ELSE   */
+
+$color-primo: rgb(241, 122, 122);
+
+.button {
+    @if(lightness($color-primo)>60%) {
+        color: black;
+    }
+
+    @else {
+        color: white;
+    }
+}
+
+/* Bucle     FOR    */
+
+
+/* through es para star-end dentro del bucle */
+@for $i from 1 through 5 {
+    /*  con el -trough- toma desde el 1 al 5 
+    el -to- toma desde el 1 al 4  */
+    /* creamos una clase elemento-#{$i}  elemento-1,col-2 */
+    .elemento-#{$i} {
+        width: 10%*$i;/*  10% 20%...100% */
+    }
+}
+
+/*   EACH */
+/* crea una clase blue, yellow y black con sus respectivos colores */
+@each $color in blue,yellow,black{
+    .#{$color}{
+        color:#{$color};
+    }
+}
+
+$fonts:"Helvica","Arial","Verdana";
+@each $fuente in $fonts{
+    .font-#{$fuente}{
+        font-family:$fuente,sans-serif;
+        font-size: 16px;
+    }
+}
+
+/* ----  MAPS  ------ */
+$redes:(
+    twitter:#55acee,
+    facebook:#3a5795,
+    send-mail:#c25e30
+);
+
+@each $red,$color in $redes{
+
+    .btn--#{$red}{
+        background-color: $color;
+    }
+
+}
+.tituloPrincipal{
+    color:map-get($map: $redes, $key:twitter );
 }
